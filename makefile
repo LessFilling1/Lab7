@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-I.
 
-all: tcpclient tcpserver udpclient udpserver
+all: tcpclient tcpserver udpclient udpserver helloworld
 
 tcpclient : tcpclient.c
 	$(CC) tcpclient.c -o tcpclient $(CFLAGS)
@@ -15,5 +15,8 @@ udpclient : udpclient.c
 udpserver : udpserver.c
 	$(CC) udpserver.c -o udpserver $(CFLAGS)
 
+helloworld : helloworld.c
+	$(CC) helloworld.c -o helloworld $(CFLAGS)
+
 clean :
-	rm tcpclient tcpserver udpclient udpserver
+	rm tcpclient tcpserver udpclient udpserver helloworld
